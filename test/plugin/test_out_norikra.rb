@@ -6,7 +6,7 @@ class NorikraOutputTest < Test::Unit::TestCase
   ]
 
   def create_driver(conf=CONFIG, tag='test')
-    Fluent::Test::OutputTestDriver.new(Fluent::NorikraOutput, tag).configure(conf)
+    Fluent::Test::OutputTestDriver.new(Fluent::Plugin::NorikraOutput, tag).configure(conf)
   end
 
   def test_init

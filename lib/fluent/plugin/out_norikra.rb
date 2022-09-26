@@ -66,15 +66,15 @@ module Fluent::Plugin
       # for conversion from query_name to tag
       @query_map = {} # 'query_name' => instance of Fluent::NorikraPlugin::Query
 
-      @default_target = ConfigSection.new(Fluent::Config::Element.new('default', nil, {}, []), @enable_auto_query)
+      @default_target = Fluent::NorikraPlugin::ConfigSection.new(Fluent::Config::Element.new('default', nil, {}, []), @enable_auto_query)
       @config_targets = {}
 
       conf.elements.each do |element|
         case element.name
         when 'default'
-          @default_target = ConfigSection.new(element, @enable_auto_query)
+          @default_target = Fluent::NorikraPlugin::ConfigSection.new(element, @enable_auto_query)
         when 'target'
-          c = ConfigSection.new(element, @enable_auto_query)
+          c = Fluent::NorikraPlugin::ConfigSection.new(element, @enable_auto_query)
           @config_targets[c.target] = c
         end
       end
