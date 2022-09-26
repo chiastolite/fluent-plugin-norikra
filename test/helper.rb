@@ -25,7 +25,6 @@ end
 
 require 'fluent/plugin/in_norikra'
 require 'fluent/plugin/out_norikra'
-require 'fluent/plugin/out_norikra_filter'
 
 class Test::Unit::TestCase
 end
