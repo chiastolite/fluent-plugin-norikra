@@ -15,7 +15,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "rack"
   spec.add_runtime_dependency "norikra-client", ">= 1.5.0"
   spec.add_runtime_dependency "fluentd", ">= 0.14.0", "< 2.0"
 
